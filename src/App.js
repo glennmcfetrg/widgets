@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Accordion from "./components/Accordion";
+import Search from "./components/Search";
+import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
 
-function App() {
+const items = [
+  {
+    title: "what is love",
+    content: "baby dont hurt me",
+  },
+  {
+    title: "im blue",
+    content: "ba ba dee",
+  },
+  {
+    title: "never gonna give you up",
+    content: "never gonna let you down",
+  },
+];
+const options = [
+  {
+    label: "The color red",
+    value: "red",
+  },
+  {
+    label: "The color blue",
+    value: "blue",
+  },
+  {
+    label: "The color green",
+    value: "green",
+  },
+];
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Translate />
     </div>
   );
-}
+};
 
 export default App;
